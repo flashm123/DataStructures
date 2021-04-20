@@ -12,19 +12,17 @@ namespace Array
             int[] numbers = { 1, 5, 0, 7, 9, -10, 139, -1, 0 };
             int[] source;
 
-            source = GetInputArray(out source);
-
-            // Reverse(numbers);
+            source = GetInputtedArray(out source);
 
             Console.WriteLine("Sum is {0}", Sum(source));
             Console.WriteLine("The second min is {0}", FindSecondMin(source));
+            Console.WriteLine("Unique elements are: ");
 
-            /*
-             * foreach (var number in source)
+            foreach (var item in FindAllUniqueElements(source))
             {
-                Console.Write(number + " ");
+                Console.Write(item + " ");
             }
-             * */
+
             Console.ReadKey();
         }
 
@@ -33,7 +31,7 @@ namespace Array
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
-        static int[] GetInputArray(out int[] source)
+        static int[] GetInputtedArray(out int[] source)
         {
             Console.WriteLine("Please input the array length");
 
@@ -109,6 +107,41 @@ namespace Array
             }
 
             return previousMin;
+        }
+
+        /// <summary>
+        /// Finds all unique elements
+        /// </summary>
+        /// <param name="ar"></param>
+        /// <returns></returns>
+        static List<int> FindAllUniqueElements(int[] ar)
+        {
+            var uniqueList = new List<int>();
+            bool isUnique = false;
+
+            for (int i = 0; i < ar.Length; i++)
+            {
+                isUnique = true;
+
+                for (int j = 0; j < ar.Length; j++)
+                {
+                    if (i != j)
+                    {
+                        if (ar[i] == ar[j])
+                        {
+                            isUnique = false;
+                            break;
+                        }
+                    }
+                }
+
+                if (isUnique)
+                {
+                    uniqueList.Add(ar[i]);
+                }
+            }
+
+            return uniqueList;
         }
     }
 }
