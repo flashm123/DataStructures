@@ -17,6 +17,7 @@ namespace Array
             // Reverse(numbers);
 
             Console.WriteLine("Sum is {0}", Sum(source));
+            Console.WriteLine("The second min is {0}", FindSecondMin(source));
 
             /*
              * foreach (var number in source)
@@ -87,6 +88,27 @@ namespace Array
             }
 
             return sum;
+        }
+
+        /// <summary>
+        /// Finds the second minimun element in the array
+        /// </summary>
+        /// <param name="ar">Input array</param>
+        /// <returns>The second minimun element</returns>
+        static int FindSecondMin(int[] ar)
+        {
+            int min = ar[0], previousMin = ar[0];
+
+            for (int i = 1; i < ar.Length; i++)
+            {
+                if (ar[i] < min)
+                {
+                    previousMin = min;
+                    min = ar[i];
+                }
+            }
+
+            return previousMin;
         }
     }
 }
