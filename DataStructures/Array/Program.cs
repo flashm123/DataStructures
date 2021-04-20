@@ -22,6 +22,14 @@ namespace Array
             {
                 Console.Write(item + " ");
             }
+            
+            Console.WriteLine("Sorted elements are: ");
+            Sort(source);
+
+            foreach (var item in source)
+            {
+                Console.Write(item + " ");
+            }
 
             Console.ReadKey();
         }
@@ -142,6 +150,24 @@ namespace Array
             }
 
             return uniqueList;
+        }
+
+        /// <summary>
+        /// Bubble Sort: O(n^2)
+        /// </summary>
+        /// <param name="ar"></param>
+        static void Sort(int[] ar)
+        {
+            for (int i = 0; i < ar.Length; i++)
+                for (int j = 0; j < ar.Length - 1; j++)
+                {
+                    if (ar[j] > ar[j + 1])
+                    {
+                        var temp = ar[j];
+                        ar[j] = ar[j + 1];
+                        ar[j + 1] = temp;
+                    }
+                }
         }
     }
 }
