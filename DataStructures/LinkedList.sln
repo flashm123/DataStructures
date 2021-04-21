@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array", "Array\Array.csproj", "{8C88C8FA-30DA-47A3-B01C-90D745699C4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree", "BinaryTree\BinaryTree.csproj", "{BD7B621B-B8D9-45B1-849D-41EF0F71CEFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,6 +21,10 @@ Global
 		{8C88C8FA-30DA-47A3-B01C-90D745699C4F}.Debug|x86.Build.0 = Debug|x86
 		{8C88C8FA-30DA-47A3-B01C-90D745699C4F}.Release|x86.ActiveCfg = Release|x86
 		{8C88C8FA-30DA-47A3-B01C-90D745699C4F}.Release|x86.Build.0 = Release|x86
+		{BD7B621B-B8D9-45B1-849D-41EF0F71CEFB}.Debug|x86.ActiveCfg = Debug|x86
+		{BD7B621B-B8D9-45B1-849D-41EF0F71CEFB}.Debug|x86.Build.0 = Debug|x86
+		{BD7B621B-B8D9-45B1-849D-41EF0F71CEFB}.Release|x86.ActiveCfg = Release|x86
+		{BD7B621B-B8D9-45B1-849D-41EF0F71CEFB}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
