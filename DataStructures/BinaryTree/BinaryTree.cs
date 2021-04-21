@@ -21,12 +21,16 @@ namespace BinaryTree
             }
         }
 
+        /// <summary>
+        /// Insert the node to the Binary Tree
+        /// </summary>
+        /// <param name="node">Node to check with the input data</param>
+        /// <param name="data">Data to insert</param>
         public void Insert(ref Node node, int data)
         {
             if (node == null)
             {
-                var itemToAdd = new Node(data);
-                node = itemToAdd;
+                node = new Node(data);
             }
             else
             {
