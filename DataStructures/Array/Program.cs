@@ -169,5 +169,13 @@ namespace Array
                     }
                 }
         }
+
+        /// <summary>
+        /// Merge Sort: O(n*log(n))
+        /// </summary>
+        /// <param name="ar"></param>
+        static void MergeSort(int[] ar)
+        {
+        }
     }
 }
