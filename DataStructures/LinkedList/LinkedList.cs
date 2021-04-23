@@ -19,15 +19,15 @@ namespace LinkedList
         {
             for (int i = 0; i < elements.Length; i++)
             {
-                Add(elements[i]);
+                Insert(elements[i]);
             }
         }
 
         /// <summary>
-        /// Add element to the linked list
+        /// Insert element to the linked list
         /// </summary>
         /// <param name="data">Item to add</param>
-        public void Add(T data)
+        public void Insert(T data)
         {
             var itemToAdd = new Node<T>(data);
 
@@ -79,6 +79,37 @@ namespace LinkedList
 
                 previous = current;
                 current = current.Next;
+            }
+        }
+
+        /// <summary>
+        /// Reverse the linked list
+        /// </summary>
+        public void Reverse()
+        {
+            Swap(head);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="current"></param>
+        private void Swap(Node<T> current)
+        {
+            Node<T> previous;
+
+            if (current != tail)
+            {
+                previous = current;
+                current = current.Next;
+                Swap(current);
+                tail.Next = previous;
+                tail = previous;
+            }
+            else
+            {
+                head.Next = null;
+                head = tail;
             }
         }
 

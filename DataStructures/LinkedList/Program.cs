@@ -12,8 +12,10 @@ namespace LinkedList
 
             var linkedList = new LinkedList<string>("a", "b", "c", "d", "e", "f", "g", "h");
 
-            linkedList.Remove("c");
-            linkedList.Remove("g");
+            // linkedList.Remove("c");
+            // linkedList.Remove("g");
+
+            linkedList.Reverse();
 
             foreach (var item in linkedList.GetNodes())
             {
